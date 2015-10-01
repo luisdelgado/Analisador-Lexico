@@ -32,10 +32,10 @@ fraci = {numeroI}+(\.numeroI*)
 ">" {System.out.println(yytext());}
 ">=" {System.out.println(yytext());}
 ("+" | "-" | "*" | "/" | "%") {System.out.println(yytext());} 
-false {System.out.println(yytext());}
-true {System.out.println(yytext());}
-this {System.out.println(yytext());}
-new {System.out.println(yytext());}
+"false" {System.out.println(yytext());}
+"true" {System.out.println(yytext());}
+"this" {System.out.println(yytext());}
+"new" {System.out.println(yytext());}
 {ws} {}
 {coment} {}
 {delim} {System.out.println(yytext());}
