@@ -5,7 +5,8 @@
 
 ws = [ \t\r\n]
 coment = "/*"~"*/"
-delim = [(){}[]]
+delim = "("|")"|"["|"]"|"{"|"}"
+
 digit = [1-9] 
 id = (_|[a-z]|[A-Z])(_|[a-z]|[A-Z]|{digit}|0)*
 numeroI = ({digit}+(0|{digit})*)|0 

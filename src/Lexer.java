@@ -31,11 +31,12 @@ class Lexer {
    */
   private static final String ZZ_CMAP_PACKED = 
     "\11\0\2\1\2\0\1\1\22\0\1\1\1\25\3\0\1\4\1\23"+
-    "\1\0\2\4\1\3\1\4\1\0\1\4\1\10\1\2\1\7\11\5"+
-    "\2\0\1\26\1\24\1\26\2\0\10\6\1\17\21\6\4\0\1\6"+
-    "\1\0\1\6\1\6\1\6\1\6\1\14\1\6\1\6\1\6\1\20"+
-    "\2\6\1\6\1\13\1\11\1\16\1\6\1\6\1\15\1\6\1\21"+
-    "\1\12\1\6\1\6\1\6\2\6\1\4\1\22\1\4\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uff92\0";
+    "\1\0\1\4\1\4\1\3\1\4\1\0\1\4\1\10\1\2\1\7"+
+    "\11\5\2\0\1\26\1\24\1\26\2\0\10\6\1\17\21\6\1\4"+
+    "\1\0\1\4\1\0\1\6\1\0\1\6\1\6\1\6\1\6\1\14"+
+    "\1\6\1\6\1\6\1\20\2\6\1\6\1\13\1\11\1\16\1\6"+
+    "\1\6\1\15\1\6\1\21\1\12\1\6\1\6\1\6\2\6\1\4"+
+    "\1\22\1\4\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uffff\0\uff92\0";
 
   /** 
    * Translates characters to character classes
@@ -255,7 +256,7 @@ class Lexer {
     char [] map = new char[0x110000];
     int i = 0;  /* index in packed string  */
     int j = 0;  /* index in unpacked array */
-    while (i < 150) {
+    while (i < 158) {
       int  count = packed.charAt(i++);
       char value = packed.charAt(i++);
       do map[j++] = value; while (--count > 0);
